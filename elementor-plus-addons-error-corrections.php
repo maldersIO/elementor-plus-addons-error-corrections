@@ -15,11 +15,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /* The Plus Addons for Elementor - Error Patch || Start */
 //______________________________________________________________________________
-add_action('admin_head','fs_plus_addon_patch');
+add_action('admin_enqueue_scripts','fs_plus_addon_patch');
+add_action('wp_enqueue_scripts','fs_plus_addon_patch');
+add_action('elementor/editor/before_enqueue_scripts', 'fs_plus_addon_patch');
 
 function fs_plus_addon_patch(){
-	echo ' <style> #elementor-panel-state-loading{display:none!important} </style> ' ;
+	$dir = plugin_dir_url(__FILE__);
+	wp_enqueue_style('error-correction' , $dir . 'css/error-correction.css', array(), '1.0.0', 'all');
 }
+
 
 //______________________________________________________________________________
 // All About Updates
