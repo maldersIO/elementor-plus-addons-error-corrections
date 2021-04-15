@@ -1,6 +1,6 @@
 <?php
 /**
-* Plugin Name: The Plus Addons for Elementor - Error Patch
+* Plugin Name: Elementor - Add On Memory Limit Error Patch
 * Plugin URI: https://github.com/FreshyMichael/elementor-plus-addons-error-corrections
 * Description: Patches The Plus Addons for Elementor Page Builder | Disables pagebuilder loading state
 * Version: 1.0.0
